@@ -3,45 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>API</title>
+    <title>API 3 Images</title>
 
-    <link rel="stylesheet" href="../bower_components/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../bower_components/swiper/dist/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 
-    <style>
-        .myslides {
-            background: #dbdbdb;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-            height: 250px;
-            border-bottom: 5px solid red;
-        }
-        
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 
 </head>
 
 <body>
 
     <div ng-app="demoApp">
-<h1 class="heading">Demo 3</h1>
+<h1 class="heading">API 3 Images</h1>
         <div class="myslides">
-            <ks-swiper-container loop="true" show-nav-buttons="true" slides-per-view="3" space-between="3" pagination-clickable="true" pagination-is-active="true">
+            <ks-swiper-container slides-per-column="1" loop="true" show-nav-buttons="true" slides-per-view="3" space-between="2" pagination-clickable="true" pagination-is-active="true">
                 <ks-swiper-slide ng-repeat="s in [1,2,3,4,5]">
                     <img ng-src="http://api.randomuser.me/portraits/thumb/women/{{s}}.jpg">
                 </ks-swiper-slide>
@@ -55,6 +30,7 @@
     <script src="../bower_components/swiper/dist/js/swiper.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../dist/angular-swiper.js"></script>
+
 
     <script>
         var module = angular.module('demoApp', ['ksSwiper']);

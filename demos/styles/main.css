@@ -1,0 +1,38 @@
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: #FFDC8B;
+    opacity: .7;
+}
+
+body{background-color: #F0EAD4;}
+
+.swiper-pagination-bullet-active {
+     opacity: 1; 
+    background: #F25E3D;
+}
+
+.myslides {
+    background: #dbdbdb;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    border-bottom: 5px solid #917A68;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #283035;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
