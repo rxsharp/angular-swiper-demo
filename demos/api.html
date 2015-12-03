@@ -22,7 +22,13 @@
                 </ks-swiper-slide>
             </ks-swiper-container>
         </div>
+        
+<div ng-controller= "MyapiCtrl"><h1>Snippet API</h1>
+<ul ng-repeat="list in myapi">
+            <li>{{list.title}}: {{list.link}}</li>
+        </ul>
 
+</div>
 
 
     </div>
@@ -33,6 +39,7 @@
 
 
     <script>
+    console.log('Script load success');
         var module = angular.module('demoApp', ['ksSwiper']);
         module.controller('TestCtrl', function($scope) {
             $scope.swiper = {};
@@ -46,6 +53,16 @@
                 });
             };
         });
+  module.controller('MyapiCtrl', function ($scope, $http) {
+    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/codeSnippets.json').success(function(theapi, response) {
+    $scope.myapi = theapi.results;
+    console.log(response);
+    });
+  });
+
+            
+        
+
     </script>
 
 </body>
